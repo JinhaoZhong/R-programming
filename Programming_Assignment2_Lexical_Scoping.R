@@ -1,3 +1,5 @@
+## vreate inverse matrix and save in cache inverse matrix
+
 makeCacheMatrix = function (x=matrix){
   inverse = NULL
   set = function(y) {
@@ -11,9 +13,11 @@ makeCacheMatrix = function (x=matrix){
 }
 
 
-
+## find inverse matrix and return by makeCacheMatrix
+## if the inverse already calculate, then getInverse.
 cacheSolve = function(x,...){
-  inverse <- x$getmean()
+  ##return inverse matrix of x
+  inverse <- x$getInverse()
   if(!is.null(inverse)) {
     message("getting cached data")
     return(inverse)
