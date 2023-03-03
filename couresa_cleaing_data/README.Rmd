@@ -1,0 +1,12 @@
+---
+title: "README"
+output: pdf_document
+date: "2023-03-03"
+---
+
+Files
+'README.md': explains the project file structure
+'CodeBook.md': describes the variables, the data, and the transformations performed
+'run_analysis.R': merges the training and the test sets, extracts the measurements on the mean and std, creates a tidy data set
+data: contains the data for the project
+'result.txt': contains the tidy data set
