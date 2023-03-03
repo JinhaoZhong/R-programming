@@ -1,0 +1,38 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Code book
+## Data
+- 'X_train.txt'/'X_test.txt': training/test set
+- 'y_train.txt'/'y_test.txt': training/test labels
+- 'subject_train.txt'/'subject_test.txt': training/test subject ids
+- 'features.txt': lists features
+- 'features_info.txt': describes features
+- 'activity_labels.txt': contains activity ids and names
+## Variables
+- `x_train`, `x_test`, `y_train`, `y_test`, `subject_train`, `subject_test`, `features`, `activity_labels`: contain the respective parts of the data set
+- `filter`: contains indices of mean and std features
+- `features_filtered`: contains mean and std features
+- `x`, `y`, `subject`: contain the respective parts of combined train/test data set
+- `x_filtered`: contains the data related to mean and std features
+- `subject_y`: combines `subject` and `y` data tables
+- `merged`: combines `subject_y` and `activity_labels`
+- `activity`: restores order of rows after merging `subject_y` and `activity_labels`
+- `df`: combines `activity` and `x_filtered`
+- `df_aggregated`: aggregates `x_filtered` in `df`
+- `result`: orders `df_aggregated` by subject and activity
+## Transformations
+1. Reads data from files
+2. Finds features that contain mean or std
+3. Combines training and testing data sets
+4. Combines columns of subject and y
+5. Merges subject, y, and activity labels
+6. Combines columns of activity and x_filtered
+7. Creates descriptive names for columns
+8. Calculates the mean of each filtered feature
+9. Orders result by subject id and activity id
+10. Creates a tidy data set file
+
+
